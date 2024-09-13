@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
 import unittest
 
 
@@ -29,7 +28,7 @@ def insert_node(head, index, value):
     if index == 0:
         new_node.next = head
         return new_node
-    previous_node = get_node_by_index(head, index-1)
+    previous_node = get_node_by_index(head, index - 1)
     new_node.next = previous_node.next
     previous_node.next = new_node
     return head
