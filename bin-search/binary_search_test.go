@@ -73,6 +73,9 @@ func TestLeftBinarySearch(t *testing.T) {
 	assert.Equal(t, 6, LeftBinarySearch(0, len(arr)-1, func(i int) bool {
 		return arr[i] > 5
 	}))
+	assert.Equal(t, 9, LeftBinarySearch(0, len(arr)-1, func(i int) bool {
+		return arr[i] > 8
+	}))
 	assert.Equal(t, math.MinInt, LeftBinarySearch(0, len(arr)-1, func(i int) bool {
 		return arr[i] > 9
 	}))
@@ -91,6 +94,12 @@ func TestRightBinarySearch(t *testing.T) {
 	}))
 	assert.Equal(t, 4, RightBinarySearch(0, len(arr)-1, func(i int) bool {
 		return arr[i] < 5
+	}))
+	assert.Equal(t, 1, RightBinarySearch(0, len(arr)-1, func(i int) bool {
+		return arr[i] < 2
+	}))
+	assert.Equal(t, 0, RightBinarySearch(0, len(arr)-1, func(i int) bool {
+		return arr[i] < 1
 	}))
 	assert.Equal(t, math.MinInt, RightBinarySearch(0, len(arr)-1, func(i int) bool {
 		return arr[i] < 0
