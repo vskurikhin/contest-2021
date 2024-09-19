@@ -22,8 +22,6 @@ def read(name: str = 'input.txt') -> (set[int], set[int]):
     reader = open(name, 'r')
     inp1 = set[int]([int(n) for n in reader.readline().split(" ")])
     inp2 = set[int]([int(c) for c in reader.readline().strip() if c.isdigit()])
-    print(inp1)
-    print(inp2)
     reader.close()
     return inp1, inp2
 
