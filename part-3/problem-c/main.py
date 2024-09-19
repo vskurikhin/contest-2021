@@ -70,14 +70,14 @@ def solution3(inp: tuple[set[int], set[int]]) -> list[int]:
 
 
 class Part3:
-    class ProblemB:
+    class ProblemC:
         def __init__(self):
             inp = read()
             write(solution1(inp), solution2(inp), solution3(inp))
 
 
 def main():
-    Part3.ProblemB()
+    Part3.ProblemC()
     pass
 
 
