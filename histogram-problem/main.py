@@ -36,7 +36,7 @@ class Stack:
         return len(self.items)
 
 
-def read(name: str = 'input.txt') -> list[int]:
+def read(name: str = 'input_test1.txt') -> list[int]:
     reader = open(name, 'r')
     result = [int(n) for n in reader.readline().split(" ")]
     reader.close()
