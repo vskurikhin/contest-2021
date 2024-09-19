@@ -12,7 +12,6 @@
 Формат вывода
 Выведите ответ на задачу.
 """
-from typing import TextIO
 
 
 def read(name: str = 'input.txt') -> set[str]:

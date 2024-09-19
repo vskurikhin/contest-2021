@@ -19,7 +19,7 @@ from typing import Callable
 """
 
 
-def read(name: str = 'input.txt') -> (list[int], list[tuple[int, int]]):
+def read(name: str = 'input_test1.txt') -> (list[int], list[tuple[int, int]]):
     reader = open(name, 'r')
     _ = int(reader.readline())
     result = [int(n) for n in reader.readline().split(" ")]
