@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from typing import Callable
+from binary_search import *
 
 """
 Дан массив из N целых чисел. Все числа от −10⁹ до 10⁹.
@@ -32,36 +32,12 @@ def read(name: str = 'input_test1.txt') -> (list[int], list[tuple[int, int]]):
     return result, request
 
 
-def l_bin_search(left: int, right: int, check: Callable[[int], bool]) -> int:
-    if left > right:
-        return -1
-    while left < right:
-        middle = (left + right) // 2
-        if check(middle):
-            right = middle
-        else:
-            left = middle + 1
-    return left
-
-
-def r_bin_search(left: int, right: int, check: Callable[[int], bool]) -> int:
-    if left > right:
-        return -1
-    while left < right:
-        middle = (left + right + 1) // 2
-        if check(middle):
-            left = middle
-        else:
-            right = middle - 1
-    return left
-
-
 def part_2_problem_c(inp: list[int], request: list[tuple[int, int]]) -> list[int]:
     result = []
     inp.sort()
     for idx, tup in enumerate(request):
-        left_idx = l_bin_search(0, len(inp), lambda i: inp[i] >= tup[0])
-        right_idx = r_bin_search(0, len(inp) - 1, lambda i: inp[i] <= tup[1])
+        left_idx = left_binary_search(0, len(inp), lambda i: inp[i] >= tup[0])
+        right_idx = right_binary_search(0, len(inp) - 1, lambda i: inp[i] <= tup[1])
         result.append(right_idx - left_idx + 1)
     return result
 
