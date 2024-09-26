@@ -66,14 +66,14 @@ def solution(inp: tuple[list[int], list[int]]) -> list[int]:
     return r
 
 
-class Part4:
-    class ProblemD:
+class Part6:
+    class ProblemB:
         def __init__(self):
             write(solution(read()))
 
 
 def main():
-    Part4.ProblemD()
+    Part6.ProblemB()
     pass
 
 
